@@ -12,6 +12,11 @@
 <body>
 	<h1>jQuery Plugin Examples: tree</h1>
 
+	<p id="expand-collapse">
+		<a href="#" data-action="expand">Expand All</a> |
+		<a href="#" data-action="collapse">Collapse All</a>
+	</p>
+
 	<ul id="tree">
 		<li>
 			<h3>1st Title</h3>
@@ -53,6 +58,11 @@
 		// Activate the plugin
 		$(document).ready(function(){
 			$('#tree').tree();
+
+			$("#expand-collapse").find('a').click(function(e){
+				e.preventDefault();
+				tree[$(this).attr('data-action')+"All"]();
+			});
 		});
 	</script>
 </body>
