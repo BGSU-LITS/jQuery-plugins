@@ -1,0 +1,23 @@
+#tree{
+	padding-left:0;
+	list-style-type:none;
+}
+#tree h3{
+	cursor:pointer;
+	margin:0;
+	padding:6px 0;
+}
+#tree .tree-collapsed{
+	display:none;
+}
+#tree p{
+	margin:0;
+	padding-bottom:1em;
+}
+#tree .tree-handle:before {
+	display:inline;
+	content: "[+] ";
+}
+#tree .tree-handle.tree-expanded:before{
+	content: "[-] "
+}
