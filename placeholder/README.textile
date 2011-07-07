@@ -1,0 +1,11 @@
+h1. jQuery placeholder plugin
+
+This plugin is simple, all you need to do is include this script and add placeholder
+attributes to the form input and textarea elements as you would normally. If the 
+user's browser doesn't have native support for the placeholder attribute this script
+adds it in.
+
+By default the class that is added to the input is _placeholder_ so just add a 
+.placeholder to your stylesheet and away you go. Below is a simple one-liner.
+
+<code>.placeholder{ color:#BBB; }</code>

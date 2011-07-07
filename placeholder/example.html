@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Plugin Examples: placeholder</title>
+	<meta charset="utf-8">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="jquery.placeholder.js"></script>
+
+	<style type="text/css">
+		label { display:block; }
+		input[type="text"], textarea{ width:300px;padding:3px; }
+		textarea{ height:200px; }
+		.placeholder{ color:#BBB; }
+	</style>
+</head>
+<body>
+	<h1>jQuery Plugin Examples: placeholder</h1>
+
+	<form action="" method="get">
+		<p>
+			<label for="input1">Input 1</label>
+			<input type="text" id="input1" name="input1" value="" placeholder="Type anything here">
+		</p>
+		<p>
+			<label for="input2">Input 2</label>
+			<input type="text" id="input2" name="input2" value="" placeholder="Type something else">
+		</p>
+		<p>
+			<label for="text1">Textarea</label>
+			<textarea id="text1" name="text1" placeholder="Type something else"></textarea>
+		</p>
+		<p>
+			<input type="submit" value="Submit">
+		</p>
+	</form>
+</body>
+</html>
