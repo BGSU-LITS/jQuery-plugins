@@ -1,5 +1,6 @@
 /**
  * jQuery Placeholder plugin
+ * v0.1
  *
  * @author	Dave Widmer (dwidmer@bgsu.edu)
  */
