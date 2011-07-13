@@ -1,6 +1,6 @@
 /**
  * Form Validation
- * v0.1.1
+ * v0.1.2
  *
  * @author	Dave Widmer (dwidmer@bgsu.edu)
  */
@@ -42,7 +42,7 @@ var validation = function(form){
 		not_empty = function(field){
 			var good = false;
 
-			if (field['length']){
+			if (field['length'] && ! field.nodeName){
 				// An array of checkboxes
 				for (var i = 0, len = field.length; i < len; i += 1){
 					if (field[i].checked) {
