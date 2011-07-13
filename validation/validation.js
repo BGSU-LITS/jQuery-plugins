@@ -1,6 +1,6 @@
 /**
  * Form Validation
- * v0.1
+ * v0.1.1
  *
  * @author	Dave Widmer (dwidmer@bgsu.edu)
  */
@@ -99,13 +99,11 @@ var validation = function(form){
 		messages = messages || {};
 
 		for (var prop in errors) {
-			for (var i = 0, num = errors[prop].length; i < num; i += 1) {
-				var rule = errors[prop][i];
-				if (messages[prop] && messages[prop][rule]){
-					errs.push(messages[prop][rule]);
-				} else {
-					errs.push(defaultErrors[rule](prop));
-				}
+			var rule = errors[prop][0];
+			if (messages[prop] && messages[prop][rule]){
+				errs.push(messages[prop][rule]);
+			} else {
+				errs.push(defaultErrors[rule](prop));
 			}
 		}
 
