@@ -1,6 +1,6 @@
 /**
  * jQuery Tree plugin
- * v0.1.1
+ * v0.1.2
  *
  * @author	Dave Widmer (dwidmer@bgsu.edu)
  */
@@ -44,11 +44,12 @@ var tree = (function(){
 		$(list).each(function(index, ele){
 			// Loop through and find all of the "handles"
 			$(ele).find(opts.handle).each(function(i, h){
+				var content = $(h).siblings(opts.content)[0];
+
 				handles.push(h);
 
 				$(h).addClass(opts.handleClass);
-				h.content = $(h).siblings(opts.content)[0];
-				$(h.content).addClass(opts.collapsedClass);
+				$(content).addClass(opts.collapsedClass);
 				$(h).click(function(e){
 					e.preventDefault();
 					$(this).toggleClass(opts.expandedClass);
@@ -56,14 +57,14 @@ var tree = (function(){
 					// Throw some interactivity in there!!
 					switch (opts.animation){
 						case "slide":
-							$(this.content).slideToggle(opts.animationSpeed).toggleClass(opts.collapsedClass);
+							$(content).slideToggle(opts.animationSpeed).toggleClass(opts.collapsedClass);
 							break;
 						case "fade":
-							$(this.content).fadeToggle(opts.animationSpeed).toggleClass(opts.collapsedClass);
+							$(content).fadeToggle(opts.animationSpeed).toggleClass(opts.collapsedClass);
 							break;
 						default:
 							// Just change the class
-							$(this.content).toggleClass(opts.collapsedClass);
+							$(content).toggleClass(opts.collapsedClass);
 					}
 				});
 			});
